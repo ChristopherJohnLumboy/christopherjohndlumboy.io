@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+       
+       <!-- inside Css-->
+       <style>
+
+        /* css for the fade in of text*/
+            .fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 1s ease-in-out, transform 0.8s ease-in-out;
+            }
+
+            .fade-in.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        /* css for the transition of the code from*/
+       
+        .slide-in-container {
+            overflow: hidden;
+        }
+
+        .slide-in-text {
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+
+       
+        /* this is my own css for text decoration*/
+       
+        .excolor {
+            background: linear-gradient(to bottom, #656565 0%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0.3) 100%);
+        }
+
+        /* unvisited link */
+            a:link {
+            color: red;
+            text-decoration: none;
+            }
+
+            /* visited link */
+            a:visited {
+            color: gainsboro;
+            text-decoration: none;
+            }
+
+            /* mouse over link */
+            a:hover {
+            color: gray;
+            text-decoration: underline;
+            }
+
+            /* selected link */
+            a:active {
+            color: green;
+            text-decoration: underline;
+            }
+
+            /* this is the css of the slideshow*/
+
+            * {box-sizing:border-box}
+
+            /*slideshow container*/
+            
+            .slideshow-container{
+                max-width: 1000px;
+                position: relative;
+                margin: auto;
+            }
+            /* hide image by default*/
+            .mySlide{
+                display: none;
+            }
+            /*next & previous buttons*/
+            .prev,.next{
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                margin-top: -22px;
+                padding: 16px;
+                color: aliceblue;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+
+            }
+            /* Position the "next button" to the right */
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+           
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+            /* The dots/bullets/indicators */
+            .dot {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s;
+            }
+           
+            /* Fading animation */
+            .fade {
+                animation-name: fade;
+                animation-duration: 5s;
+            }
+            @keyframes fade {
+                from {opacity: .4}
+                to {opacity: 1}
+            }
+
+
+            
+
+
+
+
+
+
+
+          
+        </style>
+
+
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Portfolio</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">Education</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#expirience">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacts">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase" style="justify-content: center;">Christopher John D. Lumboy</h1>
+                        <br>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Computer Engineer</h2>
+                        <a class="btn btn-primary" href="#about">Get to know me</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4 fade-in" style="font-size: 50px;">Education</h2>
+                        <br>
+
+                        <!---->
+
+                        <h3 class="text text-white fade-in" style="text-align: left; ">
+                            College
+                        </h3>
+                        <h4 class="text text-white fade-in" style="text-align: left; font-size: 15px;">
+                        Computer Enigneering        <span style="float: right;">June 2023</span>
+                        </h4>
+                        <h4 class="text-white-50 fade-in" style="font-size: 13px; text-align: left;">Bulacan State University</h4>
+                        <br>
+                        <ul style="text-align: left;">
+                            <li class="text-white fade-in">
+                                Proficiently completed coursework encompassing the design, development, implementation, and maintenance of computer systems and software.
+                            </li>
+                            <li class="text-white fade-in">
+                                Acquired a robust foundation in computer science principles and programming, with a keen focus on tackling complex technological challenges.
+
+                            </li>
+                        </ul>
+
+                        <h3 class="text text-white fade-in" style="text-align: left; ">
+                            HighSchool
+                        </h3>
+                        <h4 class="text text-white fade-in" style="text-align: left; font-size: 15px;">
+                        Fortunato F. Halili National Agricultural School        <span style="float: right;">2019</span>
+                        </h4>
+                        <h4 class="text-white-50 fade-in" style="font-size: 13px; text-align: left;">Bulacan State University</h4>
+                        <br>
+                        <ul style="text-align: justify;">
+                            <li class="text-white fade-in">
+                                Recieved with Honor upon Graduation
+                            </li>
+                            <li class="text-white fade-in">
+                                President of Science Club(2018-2019)
+                            </li>
+                            <li class="text-white fade-in">
+                                Good Conduct Awardee (2017-2018, 2018-2019)
+                            </li>
+                        </ul>
+                        
+                        
+                        
+                            
+                            
+                        </p>
+                    </div>
+                </div>
+                <!--<img class="img-fluid" src="assets/img/ipad.png" alt="..." /> -->
+            </div>
+        </section>
+
+        <section class="about-section text-center excolor" id="expirience">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-black mb-4 fade-in" style="font-size: 50px;">Experience</h2>
+                        <br>
+
+                        <!---->
+
+                        <h3 class="text text-black fade-in" style="text-align: left; ">
+                            IT Intern
+                        </h3>
+                        <h4 class="text text-black fade-in" style="text-align: left; font-size: 15px;">
+                        Salinas (IM) Corporation        <span style="float: right;">June 2023 - Aug 2023</span>
+                        </h4>
+                        <h4 class="text-white-50 fade-in" style="font-size: 13px; text-align: left;">Quezon, City</h4>
+                        <br>
+                        <ul style="text-align: left;">
+                            <li class="text-black fade-in">
+                                Successfully completed an internship as part of the on-the-job training program at Salinas IM Corporation, acquiring practical experience in Machine Learning and Python programming
+                            </li>
+                            <li class="text-black fade-in">
+                                Collaborated with a team of professionals to develop a program capable of predicting stock market trends.
+
+                            </li>
+                        </li>
+                        <li class="text-black fade-in">
+                            Developed proficiency in Python programming, web scraping, and machine learning techniques.
+
+                        </li>
+                    </li>
+                    <li class="text-black fade-in">
+                        Demonstrated adaptability, a strong work ethic, and the ability to contribute effectively to team projects.
+
+                    </li>
+                        </ul>
+
+                            
+                        </p>
+                    </div>
+                </div>
+                <!--<img class="img-fluid" src="assets/img/ipad.png" alt="..." /> -->
+            </div>
+        </section>
+        <!-- Projects-->
+
+        
+        
+        <section class="projects-section bg-light" id="projects">
+            <h1 class="text-center"> Projects</h1>
+            <h3 class="text-center" style="font-size: 15px;">Note: Please click the title to see the website and repository</h3>px
+            <br><br><br>
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center" >
+                     <div class="col-lg-6">
+                        <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="assets/Screenshot (505).png" style="width:100%">
+      
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="assets/Screenshot (506).png" style="width:100%">
+    
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="assets/Screenshot (507).png" style="width:100%">
+     
+    </div>
+  
+
+    
+  </div>
+  <br>
+  
+                     </div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4><a href="https://christopherjohnlumboy.github.io/fronendecomerce.io/index.html" target="_blank">Ecomerce web design</a></h4>
+                            <p class="text-black-50 mb-0" style="text-align: justify;">This is an example of the frontend that i together with my teamates create for an online electronics store, this is only a front end website</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/win (1).gif" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white"><a href="https://github.com/ChristopherJohnLumboy/cramman.git" target="_blank">CramMan</a></h4>
+                                    <h5 class="text-white-50" style="font-size: 15px;">  The Ultimate Procrastination Buster Game</h5>
+                                    <p class="mb-0 text-white-50">
+                                     Are you ready to dive into the chaotic world of last-minute studying and help a student overcome a week's worth of procrastination? Welcome to "Cramman," the thrilling guessing word game that combines linguistic prowess, quick thinking, and a race against time to save a student's academic future.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/lose.gif" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    
+                                    <p class="mb-0 text-white-50">In Cramman, you step into the shoes of a diligent friend determined to rescue a student from the clutches of procrastination. Armed with your word knowledge and a virtual keyboard, you'll face the challenge of guessing words in two languages - Filipino and English. The clock is ticking, and you must guess the correct word before running out of attempts to secure the student's success.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Signup-->
+       
+        <!-- Contact-->
+        <section class="contact-section bg-black" id="contacts">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Address</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">Santa Maria, Bulacan, Philippines</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Email</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="mailto:cjlumboy26@gmail.com">cjlumboy26@gmail.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Phone</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">+63 961-860-1704</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social d-flex justify-content-center fade-in">
+                   
+                    <a class="mx-2" href="https://www.facebook.com/christopherjohn.lumboy" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="mx-2" href="https://github.com/ChristopherJohnLumboy" target="_blank"><i class="fab fa-github"></i></a>
+                    <a class="mx-2" href="https://www.linkedin.com/in/christopher-john-d-lumboy-0a6911267/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <br><br>
+            </div>
+        </section>
+        <!-- Footer-->
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <!--Script for animation-->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const fadeElements = document.querySelectorAll(".fade-in");
+
+    function fadeInOnScroll() {
+        fadeElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementBottom = element.getBoundingClientRect().bottom;
+
+            if (elementTop < window.innerHeight && elementBottom > 0) {
+                element.classList.add("active");
+            } else {
+                element.classList.remove("active");
+            }
+        });
+    }
+
+    fadeInOnScroll(); // Initial call to handle elements already visible on page load
+
+    window.addEventListener("scroll", fadeInOnScroll);
+    });
+
+   // try
+   document.addEventListener("DOMContentLoaded", function () {
+    const fadeTextElements = document.querySelectorAll(".fade-in-text");
+
+    function fadeInOnScroll() {
+        fadeTextElements.forEach((element) => {
+            const triggerBottom = window.innerHeight * 0.8; // Adjust the trigger point as needed
+            const elementTop = element.getBoundingClientRect().top;
+
+            if (elementTop < triggerBottom) {
+                element.classList.add("fade-in");
+            }
+        });
+    }
+
+    // Initial check
+    fadeInOnScroll();
+
+    // Check on scroll
+    window.addEventListener("scroll", fadeInOnScroll);
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const slideInText = document.querySelector('.slide-in-text');
+
+  slideInText.style.opacity = 1;
+  slideInText.style.transform = 'translateX(0)';
+});
+
+// this is the js for the slide in 
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+
+
+
+
+        </script>
+    </body>
+</html>
